@@ -1,0 +1,13 @@
+[ec2]
+instance01 ansible_host=ec2-13-59-182-176.us-east-2.compute.amazonaws.com ansible_user=ec2-user testvar=some_text 
+
+[web]
+#instance01
+#instance02
+
+[proxy]
+#instance03
+
+[ec2:vars]
+ansible_ssh_private_key_file=secrets/key.pem
+ansible_become=true

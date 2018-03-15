@@ -1,0 +1,14 @@
+---
+- name: install tomcat in yum
+  package: name={{ item  }} state=installed
+  with_items: 
+    - tomcat8
+    - tomcat8-webapps
+    - tomcat8-admin-webapps
+
+- name: Configure Tomcat users
+  template: src=tomcat-users.xml.j2 dest=/etc/tomcat8/tomcat-users.xml
+  notify: restart tomcat
+
+- name: start tomcat
+  service: name=tomcat8 state=started

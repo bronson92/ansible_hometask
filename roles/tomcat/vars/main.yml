@@ -1,0 +1,8 @@
+ http_port: 8080
+ https_port: 8443
+
+ admin_username: admin
+ admin_password: admin1234
+
+ tomcat_version: 8.5.29
+ JAVA_HOME: /usr/lib/jvm/jre
